@@ -20,7 +20,11 @@ univariate time series task because we are not given the date of the prediction 
 (observation data points) of both before and after prediction are provided, for example, the speed of early 
 morning (0:00 am - 5:55am) and noon (11:00am - 3:55pm). 
 ### High-level discription
-It is reasonable to think of a potential solution that consider the features of time series in prediction file and use these features to find similar ones that belong to historical data. The instances (neighbors) with similar features are then used to infer the speed of interested time period in the prediction file. This general idea serves as the foundation of our solution. Since it is much like K-Nearest Neighbors (KNN) model, we name our solution KNN-based. The intuitive illustration is shown in the last page.
+It is reasonable to think of a potential solution that consider the features of time series in prediction file 
+and use these features to find similar ones that belong to historical data. The instances (neighbors) with 
+similar features are then used to infer the speed of interested time period in the prediction file. This 
+general idea serves as the foundation of our solution. Since it is much like K-Nearest Neighbors (KNN) model, 
+we name our solution KNN-based.
 ### intuitive view of our proposal
 ![alt text](proposal_graphic_view.png "Title")
 ### Pipeline overview
