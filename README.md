@@ -1,15 +1,17 @@
 # A KNN-Based Solution to TRANSFOR19 Competition
 
 ## Backgrounds of TRANSPOR19
-- Organized by: ABJ70 Artificial Intelligence and Advanced Computing Applications
-- Supported by: IEEE ITSS Technical Activities Sub-Committee “Smart Cities and Smart Mobility”
-- Sponsored by: Didi Chuxing
+Organized by: ABJ70 Artificial Intelligence and Advanced Computing Applications
 
-### Resources:
-	- the offical github repository of this competition: 
-		[github page](https://github.com/TRANSFORABJ70/TRANSFOR19)
-	- The GPS trace data of Didi drivers:
-		[GAIA Open Dataset](https://outreach.didichuxing.com/research/opendata/en/)
+Supported by: IEEE ITSS Technical Activities Sub-Committee “Smart Cities and Smart Mobility”
+
+Sponsored by: Didi Chuxing
+
+#### Resources:
+- the official github repository of this competition: 
+	[github page](https://github.com/TRANSFORABJ70/TRANSFOR19)
+- The GPS trace data of Didi drivers:
+	[GAIA Open Dataset](https://outreach.didichuxing.com/research/opendata/en/)
 
 ## description of our solution
 ### Problem formulation
@@ -19,7 +21,7 @@ univariate time series task because we are not given the date of the prediction 
 morning (0:00 am - 5:55am) and noon (11:00am - 3:55pm). 
 ### High-level discription
 It is reasonable to think of a potential solution that consider the features of time series in prediction file and use these features to find similar ones that belong to historical data. The instances (neighbors) with similar features are then used to infer the speed of interested time period in the prediction file. This general idea serves as the foundation of our solution. Since it is much like K-Nearest Neighbors (KNN) model, we name our solution KNN-based. The intuitive illustration is shown in the last page.
-#### intuitive view of our proposal
+### intuitive view of our proposal
 ![alt text](proposal_graphic_view.png "Title")
 ### Pipeline overview
 1. extract historical speed of target road from given raw GPS files.
@@ -85,7 +87,7 @@ some necessary changes of source code is required, e.g., the path to load data.
 
 - Team leader: 
 	
-	Liming Jiang, University of Massachusetts Lowell (Liming_Jiang@student.uml.edu)
+	- Liming Jiang, University of Massachusetts Lowell (Liming_Jiang@student.uml.edu)
 
 - Team members: 
 	- Yuanchang Xie, University of Massachusetts Lowell (Yuanchang_Xie@uml.edu)
