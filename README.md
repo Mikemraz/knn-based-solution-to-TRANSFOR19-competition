@@ -57,7 +57,7 @@ The proposed model is easy to deploy and could achieve decent prediction results
 1. Not like traditional time series prediction models only consider the information beforehand, our model could utilize the information after the time period of predictions, which renders more accurate results. 
 2. the proposed model is capable of predicting speed on days with accidental events, e.g., holidays, soccer games. Because some history days are likely to have similar events and could be used to make predictions.
 3. Also, no mathematical formula is needed to make predictions because of the nonparametric nature of KNN. The trend of speed is stored implicitly inside the history. 
-4. The smoothing at the preprocessing stage is proved to be effective in decreasing noise/errors. And the extra steps of smoothing both before and after actual modelling improves the performance substantially.
+4. The smoothing at the preprocessing stage is proved to be effective in decreasing noise/errors. And the extra steps of smoothing after KNN improves the performance substantially.
 
 The limitation is that it would be error-prone if the historical data is insufficient since there are few samples for model to search for. In our case, 30 days of data is somewhere in the middle. In real practice, Model would definitely behavior better if more and more historical data is incorporated.
 
