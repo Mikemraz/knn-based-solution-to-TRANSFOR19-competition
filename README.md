@@ -46,6 +46,7 @@ hyperparameters considered:
 1. final smoothing (northbound)
 
 ![alt text](smoothing_north.png "Title")
+
 2. predictions (southbound)
 
 ![alt text](prediction_south.png "Title")
