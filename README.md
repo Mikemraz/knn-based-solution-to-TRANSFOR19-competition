@@ -4,22 +4,24 @@
 - Organized by: ABJ70 Artificial Intelligence and Advanced Computing Applications
 - Supported by: IEEE ITSS Technical Activities Sub-Committee “Smart Cities and Smart Mobility”
 - Sponsored by: Didi Chuxing
-- the offical github repository of this competition: 
-	[github page](https://github.com/TRANSFORABJ70/TRANSFOR19)
-- The GPS trace data of Didi drivers:
-	[GAIA Open Dataset](https://outreach.didichuxing.com/research/opendata/en/)
+
+### Resources:
+	- the offical github repository of this competition: 
+		[github page](https://github.com/TRANSFORABJ70/TRANSFOR19)
+	- The GPS trace data of Didi drivers:
+		[GAIA Open Dataset](https://outreach.didichuxing.com/research/opendata/en/)
 
 ## description of our solution
-#### problem formulation
+### Problem formulation
 First, we formulate this problem as univariate time series prediction. But the task is not like traditional 
 univariate time series task because we are not given the date of the prediction target and the information 
 (observation data points) of both before and after prediction are provided, for example, the speed of early 
 morning (0:00 am - 5:55am) and noon (11:00am - 3:55pm). 
-### high-level discription
+### High-level discription
 It is reasonable to think of a potential solution that consider the features of time series in prediction file and use these features to find similar ones that belong to historical data. The instances (neighbors) with similar features are then used to infer the speed of interested time period in the prediction file. This general idea serves as the foundation of our solution. Since it is much like K-Nearest Neighbors (KNN) model, we name our solution KNN-based. The intuitive illustration is shown in the last page.
 #### intuitive view of our proposal
-![alt text](proposal graphic view.png "Title")
-### pipeline overview
+![alt text](proposal_graphic_view.png "Title")
+### Pipeline overview
 1. extract historical speed of target road from given raw GPS files.
 2. missing value imputation.
 3. handle outliers.
@@ -34,10 +36,12 @@ hyperparameters considered:
 - the weights for K to average speed
 - the degree of polynomial curve to smooth final results.
 - the weights of data points when smoothing the final results. For example, it makes sense if more weights are assigned to the points near our prediction time period (like 5:55, 11:05 etc.).
-### some visualizations
+### Some visualizations
 1. final smoothing (northbound)
+
 ![alt text](smoothing_north.png "Title")
 2. predictions (southbound)
+
 ![alt text](prediction_south.png "Title")
 
 ## Reflections
@@ -77,12 +81,15 @@ some necessary changes of source code is required, e.g., the path to load data.
 	- 'knn-based solution.docx'
 
 ## Contact:
-_Team RiverHawks_ 
-	- Team leader: 
-		Liming Jiang, University of Massachusetts Lowell (Liming_Jiang@student.uml.edu)
-	- Team members: 
-		- Yuanchang Xie, University of Massachusetts Lowell (Yuanchang_Xie@uml.edu)
-		- Tingjian Ge, University of Massachusetts Lowell  (ge@cs.uml.edu)
-		- Yunpeng Wu, Baidu Inc (wuyunpengbilly@gmail.com)
-		- Yan Li, University of Massachusetts Lowell  (Yan_Li1@student.uml.edu)
+**Team RiverHawks** 
+
+- Team leader: 
+	
+	Liming Jiang, University of Massachusetts Lowell (Liming_Jiang@student.uml.edu)
+
+- Team members: 
+	- Yuanchang Xie, University of Massachusetts Lowell (Yuanchang_Xie@uml.edu)
+	- Tingjian Ge, University of Massachusetts Lowell  (ge@cs.uml.edu)
+	- Yunpeng Wu, Baidu Inc (wuyunpengbilly@gmail.com)
+	- Yan Li, University of Massachusetts Lowell  (Yan_Li1@student.uml.edu)
 
